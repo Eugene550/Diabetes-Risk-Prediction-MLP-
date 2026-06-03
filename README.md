@@ -3,14 +3,12 @@
 
 ---
 
-## 📁 Required Files
-
-Make sure you have these files in the **same folder**:
+## 📁 What You Will Get After Downloading
 
 ```
 📂 Your Project Folder
- ├── diabetes_ann_keras.py          ← Main Python code
- ├── diabetes_prediction_dataset.csv ← Dataset (download from Kaggle)
+ ├── diabetes_ann_keras.py           ← Main Python code
+ ├── diabetes_prediction_dataset.csv ← Dataset
  └── README.md                       ← This file
 ```
 
@@ -31,7 +29,23 @@ You should see something like: `Python 3.10.x`
 
 ---
 
-## 📦 Step 2 — Install Required Libraries
+## 📥 Step 2 — Download Project from GitHub
+
+### Option A — Download as ZIP (Easier)
+1. Go to the GitHub repository link shared by your groupmate
+2. Click the green **Code** button
+3. Click **Download ZIP**
+4. Extract the ZIP file to any folder on your computer
+
+### Option B — Clone using Git
+If you have Git installed, open Command Prompt and run:
+```
+git clone https://github.com/YOUR_REPO_LINK_HERE.git
+```
+
+---
+
+## 📦 Step 3 — Install Required Libraries
 
 Open **Command Prompt** (Windows) or **Terminal** (Mac/Linux).
 
@@ -40,8 +54,12 @@ Navigate to your project folder:
 cd path/to/your/project/folder
 ```
 
-Then install all required libraries one by one:
+Install all required libraries with this single command:
+```
+pip install pandas numpy matplotlib seaborn scikit-learn tensorflow joblib
+```
 
+Or install one by one if the above does not work:
 ```
 pip install pandas
 pip install numpy
@@ -52,32 +70,16 @@ pip install tensorflow
 pip install joblib
 ```
 
-Or install everything at once with this single command:
-```
-pip install pandas numpy matplotlib seaborn scikit-learn tensorflow joblib
-```
-
 ---
 
-## ✅ Step 3 — Verify Installation
+## ✅ Step 4 — Verify Installation
 
 After installing, verify everything works by running this in Command Prompt:
-
 ```
 python -c "import pandas; import numpy; import matplotlib; import seaborn; import sklearn; import tensorflow; import joblib; print('All libraries installed successfully!')"
 ```
 
 If you see **"All libraries installed successfully!"** you are good to go!
-
----
-
-## 📊 Step 4 — Download the Dataset
-
-1. Go to **https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset**
-2. Sign in to Kaggle (create a free account if needed)
-3. Click the **Download** button
-4. Extract the ZIP file
-5. Copy **diabetes_prediction_dataset.csv** into your project folder
 
 ---
 
@@ -105,13 +107,14 @@ python diabetes_ann_keras.py
 | Generating Plots | Less than 1 minute |
 | **Total** | **10 to 20 minutes** |
 
-> ⚠️ Running time depends on your computer speed. Be patient during K-Fold and Permutation Importance steps.
+> ⚠️ Be patient during K-Fold and Permutation Importance steps.
+> The program is still running even if it looks like nothing is happening.
 
 ---
 
 ## 📤 Output Files Generated
 
-After running successfully, these files will be created in your project folder:
+After running successfully, these files will appear in your project folder:
 
 ```
 📂 Your Project Folder
@@ -121,16 +124,6 @@ After running successfully, these files will be created in your project folder:
  ├── diabetes_le_smoking.pkl     ← Saved smoking encoder
  └── ann_results.png             ← All 8 visualisation plots
 ```
-
----
-
-## 🐍 Recommended Python Version
-
-| | Recommended |
-|---|---|
-| Python | 3.10 or 3.11 |
-| TensorFlow | 2.13 or above |
-| scikit-learn | 1.3 or above |
 
 ---
 
@@ -194,12 +187,22 @@ pip3 install tensorflow
 
 You can run the code using any of these:
 
-| IDE | Download |
+| IDE | How to get it |
 |---|---|
 | **VS Code** (Recommended) | https://code.visualstudio.com/ |
-| **Jupyter Notebook** | `pip install notebook` then run `jupyter notebook` |
+| **Jupyter Notebook** | Run `pip install notebook` then `jupyter notebook` |
 | **PyCharm** | https://www.jetbrains.com/pycharm/ |
-| **Command Prompt** | Already available on Windows |
+| **Command Prompt** | Already available on Windows — no install needed |
+
+---
+
+## 🐍 Recommended Python Version
+
+| | Recommended |
+|---|---|
+| Python | 3.10 or 3.11 |
+| TensorFlow | 2.13 or above |
+| scikit-learn | 1.3 or above |
 
 ---
 
