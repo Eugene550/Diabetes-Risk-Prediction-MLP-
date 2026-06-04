@@ -1,3 +1,4 @@
+#Refined version
 # ============================================================
 # Diabetes Risk Prediction — Artificial Neural Network (ANN)
 # BAXI 3133 | Neural Network | Group Mini Project
@@ -91,9 +92,12 @@ print(f"Duplicates removed    : {rows_before - len(df)} rows")
 df = df[df['gender'] != 'Other']
 print(f"Removed 'Other' gender: kept {len(df)} rows")
 
-# Step 3: Remove unrealistic age values
-df = df[df['age'] >= 1]
-print(f"After age filter      : {len(df)} rows")
+# Step 3: Keep only adults (age >= 18)
+# Type 2 diabetes is predominantly an adult disease, and the clinical
+# indicators in this dataset (HbA1c, BMI, glucose) are adult risk markers.
+# This filter also removes the unrealistic decimal/infant ages (0.08 - 1.88).
+df = df[df['age'] >= 18]
+print(f"After age filter (>=18): {len(df)} rows")
 
 # Step 4: Remove outliers using IQR method on continuous features
 def remove_outliers_iqr(dataframe, column, multiplier=3.0):
