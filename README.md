@@ -7,26 +7,29 @@
 
 ```
 📂 Your Project Folder
- ├── diabetes_ann_keras.py            ← Training code
- ├── predict.py                       ← Prediction script
+ ├── diabetes_ann_keras.py            ← Main training code
+ ├── predict.py                       ← Prediction script (interactive)
  ├── diabetes_prediction_dataset.csv  ← Dataset
- ├── README.md                        ← Setup guide
+ ├── README.md                        ← This file
  │
- ├── diabetes_ann_model.keras         ← Saved model
- ├── diabetes_scaler.pkl              ← Saved scaler
+ │   (saved model files — already trained, ready to use)
+ ├── diabetes_ann_model.keras         ← Trained ANN model
+ ├── diabetes_scaler.pkl              ← StandardScaler
  ├── diabetes_le_gender.pkl           ← Gender encoder
- ├── diabetes_le_smoking.pkl          ← Smoking encoder
- │
- ├── ann_results.png                  ← Sample output graph ✅
- └── model_results.txt                ← Sample metrics ✅
+ └── diabetes_le_smoking.pkl          ← Smoking encoder
 ```
 
 ---
 
 ## 💻 Step 1 — Install Python
 
-1. Go to **https://www.python.org/downloads/**
-2. Download **Python 3.10 or above**
+> ⚠️ **IMPORTANT — Use Python 3.10, 3.11, or 3.12 only!**
+> Do NOT use Python 3.13 or 3.14 — TensorFlow does not support them yet,
+> and `pip install tensorflow` will fail with "No matching distribution found".
+> **Python 3.12 is recommended.**
+
+1. Go to **https://www.python.org/downloads/release/python-3127/**
+2. Scroll to "Files" and download **Windows installer (64-bit)** — this is **Python 3.12**
 3. During installation — **tick the box "Add Python to PATH"**
 4. Click Install Now
 
@@ -34,7 +37,7 @@ To verify Python is installed, open **Command Prompt** and type:
 ```
 python --version
 ```
-You should see something like: `Python 3.10.x`
+You should see something like: `Python 3.12.x` (must NOT be 3.13 or 3.14)
 
 ---
 
@@ -247,6 +250,27 @@ or make sure the 4 saved files are in the same folder as `predict.py`.
 
 ---
 
+### Problem 8: TensorFlow won't install (No matching distribution)
+```
+ERROR: Could not find a version that satisfies the requirement tensorflow
+ERROR: No matching distribution found for tensorflow
+```
+**Cause:** Your Python version is **too new** (e.g. Python 3.13 or 3.14).
+TensorFlow only supports Python 3.10 – 3.12.
+
+**Solution:**
+1. Check your Python version: `python --version`
+2. If it shows 3.13 or 3.14, install **Python 3.12** from
+   https://www.python.org/downloads/release/python-3127/
+3. Tick "Add Python to PATH" during installation
+4. If you have multiple Python versions installed, use Python 3.12 explicitly:
+   ```
+   py -3.12 -m pip install tensorflow
+   py -3.12 diabetes_ann_keras.py
+   ```
+
+---
+
 ## 💡 Recommended IDE (Optional)
 
 You can run the code using any of these:
@@ -265,11 +289,13 @@ You can run the code using any of these:
 
 ## 🐍 Recommended Python Version
 
-| | Recommended |
-|---|---|
-| Python | 3.10 or 3.11 |
-| TensorFlow | 2.13 or above |
-| scikit-learn | 1.3 or above |
+| | Recommended | Notes |
+|---|---|---|
+| Python | **3.10 – 3.12** | ⚠️ NOT 3.13 or 3.14 (TensorFlow unsupported) |
+| TensorFlow | 2.13 or above | Installs automatically with pip |
+| scikit-learn | 1.3 or above | Installs automatically with pip |
+
+> 💡 **Tip:** Python 3.12 is the safest choice for this project.
 
 ---
 
