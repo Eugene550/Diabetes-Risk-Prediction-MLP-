@@ -7,16 +7,18 @@
 
 ```
 📂 Your Project Folder
- ├── diabetes_ann_keras.py            ← Main training code
- ├── predict.py                       ← Prediction script (interactive)
+ ├── diabetes_ann_keras.py            ← Training code
+ ├── predict.py                       ← Prediction script
  ├── diabetes_prediction_dataset.csv  ← Dataset
- ├── README.md                        ← This file
+ ├── README.md                        ← Setup guide
  │
- │   (saved model files — already trained, ready to use)
- ├── diabetes_ann_model.keras         ← Trained ANN model
- ├── diabetes_scaler.pkl              ← StandardScaler
+ ├── diabetes_ann_model.keras         ← Saved model
+ ├── diabetes_scaler.pkl              ← Saved scaler
  ├── diabetes_le_gender.pkl           ← Gender encoder
- └── diabetes_le_smoking.pkl          ← Smoking encoder
+ ├── diabetes_le_smoking.pkl          ← Smoking encoder
+ │
+ ├── ann_results.png                  ← Sample output graph ✅
+ └── model_results.txt                ← Sample metrics ✅
 ```
 
 ---
