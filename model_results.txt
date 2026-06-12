@@ -1,0 +1,62 @@
+============================================================
+  DIABETES RISK PREDICTION — MODEL RESULTS
+  BAXI 3133 | ANN (MLP) with Keras/TensorFlow
+============================================================
+
+DATASET (after cleaning)
+----------------------------------------
+Total records : 78,273
+Features used : 8
+Train / Val / Test : 54791 / 11741 / 11741
+
+STRATIFIED 5-FOLD CROSS VALIDATION
+----------------------------------------
+  Fold 1: Accuracy = 0.9030 | ROC-AUC = 0.9673
+  Fold 2: Accuracy = 0.8921 | ROC-AUC = 0.9721
+  Fold 3: Accuracy = 0.9059 | ROC-AUC = 0.9739
+  Fold 4: Accuracy = 0.9022 | ROC-AUC = 0.9710
+  Fold 5: Accuracy = 0.8591 | ROC-AUC = 0.9691
+  Mean Accuracy : 0.8925 (+/- 0.0173)
+  Mean ROC-AUC  : 0.9707 (+/- 0.0023)
+
+VALIDATION SET
+----------------------------------------
+Accuracy : 0.9192
+ROC-AUC  : 0.9730
+
+TEST SET
+----------------------------------------
+Accuracy  : 0.9172
+Precision : 0.5639
+Recall    : 0.8626
+F1 Score  : 0.6819
+ROC-AUC   : 0.9722
+
+CLASSIFICATION REPORT (Test Set)
+----------------------------------------
+              precision    recall  f1-score   support
+
+ No Diabetes       0.98      0.92      0.95     10533
+    Diabetes       0.56      0.86      0.68      1208
+
+    accuracy                           0.92     11741
+   macro avg       0.77      0.89      0.82     11741
+weighted avg       0.94      0.92      0.92     11741
+
+CONFUSION MATRIX (Test Set)
+----------------------------------------
+  True Negative : 9727
+  False Positive: 806
+  False Negative: 166
+  True Positive : 1042
+
+PERMUTATION FEATURE IMPORTANCE
+----------------------------------------
+HbA1c_level            0.193958
+blood_glucose_level    0.127844
+age                    0.018493
+bmi                    0.006487
+hypertension           0.003359
+gender                 0.001437
+heart_disease          0.001430
+smoking_history        0.000635
