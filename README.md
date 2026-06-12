@@ -17,6 +17,9 @@
  ├── diabetes_scaler.pkl              ← StandardScaler
  ├── diabetes_le_gender.pkl           ← Gender encoder
  └── diabetes_le_smoking.pkl          ← Smoking encoder
+ │
+ ├── ann_results.png                  ← Sample output graph ✅
+ └── model_results.txt                ← Sample metrics ✅
 ```
 
 ---
